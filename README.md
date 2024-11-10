@@ -31,9 +31,8 @@ Follow these steps to get the project running on your local machine:
 
 1. Clone this repository:
 
-   ```bash
-   git clone https://github.com/your-username/whatsapp-messenger.git
-   cd whatsapp-messenger
+   ```bash https://github.com/Saadnadeem07/Client-Server-Computer-Networks-Project.git
+
    ```
 
 2. Install the required dependencies:
