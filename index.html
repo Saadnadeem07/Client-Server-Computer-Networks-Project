@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whatsapp Messenger</title>
+    <link rel="stylesheet" href="./style.css" />
+    <audio id="notificationSound" src="./whistle.mp3"></audio>
+  </head>
+  <body>
+    <section class="container">
+      <section class="status-section">
+        <h2 style="background-color: #41b06e">Saad Nadeem</h2>
+        <div class="status-container">
+          <input
+            type="text"
+            id="statusInput"
+            class="status-input"
+            placeholder="Set your status..."
+          />
+          <button onclick="uploadStatus()">Upload Status</button>
+        </div>
+        <div class="status__area" id="statusUpdates"></div>
+      </section>
+      <section class="chat__section">
+        <div class="brand">
+          <img height="50" src="logo.png" alt="" />
+          <h1>Whatsapp Messenger</h1>
+        </div>
+        <div class="message__area"></div>
+        <div class="message-container">
+          <input
+            type="text"
+            id="messageInput"
+            class="message-input"
+            placeholder="Write a message..."
+          />
+          <button onclick="sendMessage()">Send</button>
+          <input type="file" id="fileInput" multiple style="display: none" />
+          <button onclick="document.getElementById('fileInput').click()">
+            Send Files
+          </button>
+        </div>
+        <audio id="audioPlayer" controls style="display: none"></audio>
+        <div class="voice-recording-container">
+          <button
+            id="startRecordBtn"
+            ontouchstart="startRecording()"
+            onmousedown="startRecording()"
+            ontouchend="stopRecording()"
+            onmouseup="stopRecording()"
+          >
+            Hold to Record Voice
+          </button>
+        </div>
+      </section>
+    </section>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="./client.js"></script>
+  </body>
+</html>
